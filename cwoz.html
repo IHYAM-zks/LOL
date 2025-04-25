@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        :root {
+            --secondary-color: #2196F3;
+            --accent-color: #FF5722;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .grid-item {
+            border: none;
+            padding: 25px;
+            text-align: center;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .grid-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-color);
+        }
+
+        .grid-item h2 {
+            margin: 0 0 10px 0;
+            color: var(--dark-color);
+            font-size: 1.5em;
+        }
+
+        .grid-item p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .download {
+            grid-row: 1 / 3;
+            grid-column: 1 / 4;
+            background-color:lightskyblue;
+        }
+
+        .download h2 {
+            font-size: 2em;
+            color: var(--primary-color);
+        }
+
+        .new {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .grid-item:nth-child(2) { /* 新手必备 */
+            background-color: lightseagreen;
+        }
+
+        .grid-item:nth-child(3) { /* 领取中心 */
+            background-color: lightseagreen;
+        }
+
+        .grid-item:nth-child(4) { /* 在线客服 */
+
+        }
+
+        .grid-item:nth-child(5) { /* 秩序殿堂 */
+
+        }
+
+        .grid-item:nth-child(6) { /* 游戏资料 */
+
+        }
+
+        .grid-item:nth-child(7) { /* 峡谷之巅 */
+
+        }
+
+        .grid-item:nth-child(8) { /* 云顶之弈 */
+
+        }
+
+        .grid-item:nth-child(9) { /* 攻略中心 */
+
+        }
+
+        .grid-item:nth-child(10) { /* LOL宇宙 */
+
+        }
+
+        .grid-item:nth-child(11) { /* 微信绑定 */
+
+        }
+
+        .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .download {
+                grid-row: 1 / 3;
+                grid-column: 1 / 3;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .download {
+                grid-row: auto;
+                grid-column: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="grid-container">
+    <!-- 下载游戏 -->
+    <div class="grid-item download">
+        <div class="icon"><i class="fas fa-download"></i></div>
+        <h2>下载游戏</h2>
+        <p>DOWNLOAD THE GAME</p>
+    </div>
+
+    <!-- 右上角列 -->
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-star"></i></div>
+        <h2>新手必备</h2>
+    </div>
+
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-gift"></i></div>
+        <h2>领取中心</h2>
+    </div>
+
+    <!-- 中间行 -->
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-headset"></i></div>
+        <h2>在线客服</h2>
+    </div>
+
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-landmark"></i></div>
+        <h2>秩序殿堂</h2>
+    </div>
+
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-book"></i></div>
+        <h2>游戏资料</h2>
+    </div>
+
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-mountain"></i></div>
+        <h2>峡谷之巅</h2>
+    </div>
+
+    <!-- 底部行 -->
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-chess"></i></div>
+        <h2>云顶之弈</h2>
+        <span class="new">NEW</span>
+    </div>
+
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+        <h2>攻略中心</h2>
+    </div>
+
+    <div class="grid-item">
+        <div class="icon"><i class="fas fa-globe"></i></div>
+        <h2>LOL宇宙</h2>
+    </div>
+
+    <div class="grid-item">
+        <div class="icon"><i class="fab fa-weixin"></i></div>
+        <h2>微信绑定</h2>
+    </div>
+</div>
+
+</body>
+</html>

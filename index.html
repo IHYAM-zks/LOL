@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LOL</title>
+  <style>
+
+    /*-------------------------------------------赵康硕⬇----------------------------------------------------------------*/
+
+    ul {
+      list-style-type: none;
+    }
+
+    .li {
+      display: inline-block;
+      float: left;
+      position: relative;
+      left: 145px;
+      font-size: 20px;
+      color: rgb(255, 255, 255);
+      font-family: tahoma, 微软雅黑, sans-serif;
+    }
+
+    /*最上面的背景*/
+    .head {
+      background-image: url("image/beijing2.jpg");
+      border-radius: 8px;
+      display: block;
+      margin-left: -8px;
+      margin-top: -8px;
+      height: 360px;
+      width: 1920px;
+    }
+
+    /*左上角lol图标*/
+    #logo {
+      float: left;
+      position: relative;
+      left: 163px;
+      top: 10px;
+      /*光标变成小手*/
+      cursor: pointer;
+    }
+
+    /*最上面五个选项的ul模块*/
+    .menu {
+      float: left;
+      position: relative;
+      font-family: tahoma, 微软雅黑, sans-serif;
+      left: 10px;
+      letter-spacing: 1px;
+    }
+
+    /*最上面五个选项*/
+    .choose {
+      cursor: pointer;
+      display: block;
+      position: relative;
+      font-family: tahoma, 微软雅黑, sans-serif;
+      font-size: 18px;
+      width: 135.292px;
+      font-weight: 400;
+      height: 27px;
+      line-height: 27px;
+      margin-right: 14px;
+      margin-bottom: -20px;
+    }
+
+    #shop {
+      position: relative;
+      left: -4px;
+    }
+
+    /*最上面五个选项的英文*/
+    .choose-english {
+      font-size: 11px;
+      color: rgb(174, 174, 174);
+      font-weight: 400;
+      position: relative;
+      display: flex;
+      left: 4px;
+      bottom: 3px;
+    }
+
+    #store {
+      position: relative;
+      left: 20px;
+    }
+
+    #esports, #system {
+      position: relative;
+      left: 14px;
+    }
+
+    /*最上面五个选项的子选项*/
+    .choose1 {
+      display: block;
+      color: rgb(225, 225, 225);
+      font-family: tahoma, 微软雅黑, sans-serif;
+      font-size: 14px;
+      position: relative;
+      right: 175px;
+      top: 35px;
+      margin-bottom: 10.2px;
+      cursor: pointer;
+    }
+
+    .choose1:hover {
+      color: gold;
+    }
+
+    /*右上角头像图标*/
+    #photo {
+      float: left;
+      position: relative;
+      left: 330px;
+      top: 20px;
+    }
+
+    .text {
+      position: relative;
+      bottom: 128px;
+      left: 50px;
+      color: white;
+    }
+
+    /*收起竖列*/
+    .d1 {
+      display: none;
+    }
+
+    li:hover .d1 {
+      display: block;
+    }
+
+    /*查看详情*/
+    #chakan {
+      position: relative;
+      left: 757px;
+      top: -73px;
+    }
+
+    #deng {
+      color: rgb(255, 243, 208);
+      cursor: pointer;
+    }
+
+    /*版本详情整体*/
+    .you-xia {
+      display: block;
+      width: 500px;
+      height: 26px;
+      position: relative;
+      top: -97px;
+      left: 1265px;
+      color: rgb(136, 135, 135);
+      font-size: 14px;
+    }
+
+    /*Ver 25.8*/
+    #banben {
+      color: rgb(245, 209, 133);
+      font-family: tahoma, 微软雅黑, sans-serif;
+      margin-left: -15px;
+    }
+
+    /*版本详情*/
+    #banbenxiangqing {
+      color: rgb(245, 209, 133);
+      width: 60px;
+      height: 22px;
+      margin-left: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    /*-------------------------------------------赵康硕⬆----------------------------------------------------------------*/
+
+
+
+
+
+/*----------------------------------------------李冰雨⬇-----------------------------------------------------------------*/
+
+.lby{
+	position: relative;
+	bottom: 30px;
+	left: 153px;
+}
+
+/*----------------------------------------------李冰雨⬆-----------------------------------------------------------------*/
+
+
+
+
+
+    /*-------------------------------------------王奕楠⬇----------------------------------------------------------------*/
+
+    .wyn{
+      position: relative;
+      left: 1010px;
+      bottom: 418px;
+    }
+
+    /*-------------------------------------------王奕楠⬆----------------------------------------------------------------*/
+
+
+
+
+
+    /*-------------------------------------------通美⬇----------------------------------------------------------------*/
+
+    .container {
+      position: relative;
+      bottom: 380px;
+      right: 270px;
+      height: 277.998px;
+      width: 820px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+	
+	.remen{
+		font-size: 24px;
+		float: left;
+		margin-right: 20px;
+	}
+
+    .nav-container {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 10px 0;
+      border-bottom: 2px solid #eee;
+    }
+
+    .nav-item {
+      font-size: 16px;
+      color: #666;
+      cursor: pointer;
+      transition: color 0.3s;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    .nav-item:hover,
+    .nav-item.active {
+      color: #ff4e33;
+    }
+
+    .nav-item.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ff4e33;
+    }
+
+    .more-link {
+      margin-left: auto;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .activity-section {
+      display: none;
+      overflow-x: auto;
+      padding: 20px 0;
+    }
+
+    .activity-section.active {
+      display: block;
+    }
+
+    .activity-grid {
+      display: flex;
+      gap: 30px;
+      padding-bottom: 20px;
+    }
+
+    .activity-card {
+      width: 192.99px;
+      height: 277.998px;
+      background: white;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .activity-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .activity-name {
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    /*-------------------------------------------通美⬆----------------------------------------------------------------*/
+
+
+
+
+
+    /*------------------------------------------次旺欧珠⬇-------------------------------------------------------------*/
+
+    :root {
+      --secondary-color: #2196F3;
+      --accent-color: #FF5722;
+      --dark-color: #333;
+      --light-color: #f8f9fa;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .grid-container {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      position: relative;
+      left: 435px;
+      bottom: 705px;
+      width: 505px;
+      height: 365px;
+      font-size: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .grid-item {
+      border: none;
+      padding: 25px;
+      text-align: center;
+      background-color: white;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .grid-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--primary-color);
+    }
+
+    .grid-item h2 {
+      margin: 0 0 10px 0;
+      color: var(--dark-color);
+      font-size: 1.5em;
+    }
+
+    .grid-item p {
+      margin: 0;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .download {
+      grid-row: 1 / 3;
+      grid-column: 1 / 4;
+      background-color:lightskyblue;
+    }
+
+    .download h2 {
+      font-size: 2em;
+      color: var(--primary-color);
+    }
+
+    .new {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: var(--accent-color);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-size: 0.7em;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .grid-item:nth-child(2) { /* 新手必备 */
+      background-color: lightseagreen;
+    }
+
+    .grid-item:nth-child(3) { /* 领取中心 */
+      background-color: lightseagreen;
+    }
+
+    .grid-item:nth-child(4) { /* 在线客服 */
+
+    }
+
+    .grid-item:nth-child(5) { /* 秩序殿堂 */
+
+    }
+
+    .grid-item:nth-child(6) { /* 游戏资料 */
+
+    }
+
+    .grid-item:nth-child(7) { /* 峡谷之巅 */
+
+    }
+
+    .grid-item:nth-child(8) { /* 云顶之弈 */
+
+    }
+
+    .grid-item:nth-child(9) { /* 攻略中心 */
+
+    }
+
+    .grid-item:nth-child(10) { /* LOL宇宙 */
+
+    }
+
+    .grid-item:nth-child(11) { /* 微信绑定 */
+
+    }
+
+    .icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .download {
+        grid-row: 1 / 3;
+        grid-column: 1 / 3;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      .download {
+        grid-row: auto;
+        grid-column: auto;
+      }
+    }
+    /*------------------------------------------次旺欧珠⬆-------------------------------------------------------------*/
+
+
+  </style>
+</head>
+<body>
+
+<!----------------------------------------------赵康硕⬇----------------------------------------------------------------->
+
+<!--上面-->
+<div class="head">
+  <div>
+    <img id="logo" src="image/logo-public.png" height="60" width="167"/>
+    <!--主菜单-->
+    <ul class="menu" >
+      <li class="li">
+        <span class="choose">游戏资料</span><br>
+        <span class="choose-english">GAME INFO</span>
+        <div class="d1">
+          <ul>
+            <li class="li">
+              <a class="choose1">游戏下载</a>
+              <a class="choose1">新手指引</a>
+              <a class="choose1">资料库</a>
+              <a class="choose1">云顶之弈</a>
+              <a class="choose1">攻略中心</a>
+              <a class="choose1">开发者基地</a>
+              <a class="choose1">海克斯战利品库</a>
+              <a class="choose1">英雄联盟宇宙</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="li">
+        <span id="shop" class="choose">商城/合作</span><br>
+        <span id="store" class="choose-english">STORE</span>
+        <div class="d1">
+          <ul>
+            <li class="li">
+              <a class="choose1">点卷充值</a>
+              <a class="choose1">道聚城</a>
+              <a class="choose1">周边商城</a>
+              <a class="choose1">网吧特权</a>
+              <a class="choose1">电竞小说</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="li">
+        <span class="choose">社区互动</span><br>
+        <span class="choose-english">COMMUNITY</span>
+        <div class="d1">
+          <ul>
+            <li class="li">
+              <a class="choose1">视频中心</a>
+              <a class="choose1">官方微博</a>
+              <a class="choose1">作者入驻计划</a>
+              <a class="choose1">英雄联盟素材库</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="li" >
+        <span class="choose">赛事官网</span><br>
+        <span id="esports" class="choose-english">ESPORTS</span>
+        <div class="d1">
+          <ul>
+            <li class="li">
+              <a class="choose1">LPL职业联赛</a>
+              <a class="choose1">全球总决赛</a>
+              <a class="choose1">季中冠军赛</a>
+              <a class="choose1">全球先锋赛</a>
+              <a class="choose1">德玛西亚杯</a>
+              <a class="choose1">城市英雄争霸赛</a>
+              <a class="choose1">全国高校联赛</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="li" >
+        <span  class="choose">自助系统</span><br>
+        <span id="system" class="choose-english">SYSTEM</span>
+        <div class="d1">
+          <ul>
+            <li class="li">
+              <a class="choose1">图标自助领取</a>
+              <a class="choose1">转区系统</a>
+              <a class="choose1">封号查询</a>
+              <a class="choose1">账号注销</a>
+              <a class="choose1">信誉分系统</a>
+              <a class="choose1">服务器状态查询</a>
+              <a class="choose1">秩序殿堂</a>
+              <a class="choose1">峡谷之巅</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <div>
+      <div id="photo">
+        <img src="image/4dcf84ae08d68ec08e44a198188f254.png" height="36" width="36"/><br><br><br><br><br>
+        <div class="text">亲爱的召唤师，欢迎<a id="deng">登录</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--查看详情 以及 版本详情-->
+<img id="chakan" src="image/查看详情.png" height="40" width="160">
+<div class="you-xia">
+  <span>当前游戏版本为：</span>
+  <em id="banben">Ver 25.8</em>
+  <span id="banbenxiangqing" style="border: 2px solid  rgb(245, 209, 133) " >版本详情</span>
+  </div>
+</div>
+
+<!----------------------------------------------赵康硕⬆----------------------------------------------------------------->
+
+
+
+
+
+<!----------------------------------------------李冰雨⬇----------------------------------------------------------------->
+
+<a class="lby" href="lby.html">
+	<img src="image/lby.png" width="820px" height="380px"/>
+</a>
+		
+<!----------------------------------------------李冰雨⬆----------------------------------------------------------------->
+
+
+
+
+
+<!-----------------------------------------------王奕楠⬇------------------------------------------------------------------->
+
+<a class="wyn" href="wyn.html">
+	<img src="image/wyn.png" height="390px" width="510px"/>
+	</a>
+<a class="wyn" href="wyn.html">
+	<img src="image/wyn.png" height="390px" width="510px"/>
+</a>
+
+<!-----------------------------------------------王奕楠⬆------------------------------------------------------------------>
+
+
+
+
+
+<!-----------------------------------------------通美⬇------------------------------------------------------------------->
+
+<div class="container">
+	<span class="remen">热门活动</span>
+  <div class="nav-container">
+    <div class="nav-item" data-target="ongoing">正在进行</div>
+    <div class="nav-item" data-target="mall">商城特惠</div>
+    <div class="nav-item" data-target="longterm">长期活动</div>
+    <a href="#" class="more-link">更多 →</a>
+  </div>
+
+
+  <!-- 正在进行 -->
+  <div class="activity-section" id="ongoing">
+    <div class="activity-grid">
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1745285536_uploadnewsImg.jpg">
+        <div class="activity-name">周最佳阵容精选皮肤限时五折</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1744946328_uploadnewsImg.jpg">
+        <div class="activity-name">天命秘宝</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1744859476_uploadnewsImg.jpg">
+        <div class="activity-name">拉克丝的德玛西亚白日梦</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1744858584_uploadnewsImg.jpg">
+        <div class="activity-name">黎明使者小小锐雯</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 商城特惠 -->
+  <div class="activity-section" id="mall">
+    <div class="activity-grid">
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1745027491_uploadnewsImg.jpg">
+        <div class="activity-name">星之守护者主题周边集结</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1743056930_uploadnewsImg.jpg">
+        <div class="activity-name">愚人节主题服饰欢乐上线</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1742437675_uploadnewsImg.jpg">
+        <div class="activity-name">皎月寒芒，铭刻永恒</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1741944579_uploadnewsImg.jpg">
+        <div class="activity-name">双城系列周边火热开售中</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 长期活动 -->
+  <div class="activity-section" id="longterm">
+    <div class="activity-grid">
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1744861784_uploadnewsImg.jpg">
+        <div class="activity-name">织命与逆命2025</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1742440436_uploadnewsImg.jpg">
+        <div class="activity-name">战斗学院2025</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1740035592_uploadnewsImg.jpg">
+        <div class="activity-name">正义假面系列皮肤</div>
+      </div>
+      <div class="activity-card">
+        <img src="https://ossweb-img.qq.com/images/clientpop/act/lol_1697425076_uploadnewsImg.jpg">
+        <div class="activity-name">正泰名品</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav-item');
+    const sections = document.querySelectorAll('.activity-section');
+
+    navItems.forEach(item => {
+      item.addEventListener('click', function() {
+        // 移除所有激活状态
+        navItems.forEach(nav => nav.classList.remove('active'));
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        // 添加当前激活状态
+        this.classList.add('active');
+        const targetId = this.dataset.target;
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+
+    // 默认显示热门活动
+    document.querySelector('[data-target="ongoing"]').click();
+  });
+</script>
+
+<!-----------------------------------------------通美⬆------------------------------------------------------------------->
+
+
+
+
+
+<!---------------------------------------------次旺欧珠⬇----------------------------------------------------------------->
+
+<div class="grid-container">
+  <!-- 下载游戏 -->
+  <div class="grid-item download">
+    <div class="icon"><i class="fas fa-download"></i></div>
+    <h2>下载游戏</h2>
+    <p>DOWNLOAD THE GAME</p>
+  </div>
+
+  <!-- 右上角列 -->
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-star"></i></div>
+    <h2>新手必备</h2>
+  </div>
+
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-gift"></i></div>
+    <h2>领取中心</h2>
+  </div>
+
+  <!-- 中间行 -->
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-headset"></i></div>
+    <h2>在线客服</h2>
+  </div>
+
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-landmark"></i></div>
+    <h2>秩序殿堂</h2>
+  </div>
+
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-book"></i></div>
+    <h2>游戏资料</h2>
+  </div>
+
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-mountain"></i></div>
+    <h2>峡谷之巅</h2>
+  </div>
+
+  <!-- 底部行 -->
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-chess"></i></div>
+    <h2>云顶之弈</h2>
+    <span class="new">NEW</span>
+  </div>
+
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-lightbulb"></i></div>
+    <h2>攻略中心</h2>
+  </div>
+
+  <div class="grid-item">
+    <div class="icon"><i class="fas fa-globe"></i></div>
+    <h2>LOL宇宙</h2>
+  </div>
+
+  <div class="grid-item">
+    <div class="icon"><i class="fab fa-weixin"></i></div>
+    <h2>微信绑定</h2>
+  </div>
+</div>
+
+<!---------------------------------------------次旺欧珠⬆----------------------------------------------------------------->
+
+
+
+
+
+</body>
+</html>

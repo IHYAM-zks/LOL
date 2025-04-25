@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>英雄联盟资讯页面</title>
+    <style>
+        @media (max-width: 768px) {
+            .nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #f3f4f6;
+                z-index: 10;
+            }
+            .nav ul.show {
+                display: flex;
+            }
+            .nav ul li {
+                padding: 0.5rem 1rem;
+            }
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        /* 点击标题添加样式 */
+        .nav ul li a.active {
+            border-bottom: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+<nav class="nav bg-gray-200 p-3 relative">
+    <div class="flex justify-between items-center">
+        <div class="text-gray-700 text-xl font-bold">英雄联盟资讯</div>
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+    <ul class="flex justify-around list-none md:flex-row">
+        <li><a href="#comprehensive" data-target="comprehensive" class="text-gray-700 px-2 py-1 border-b-2 border-transparent hover:border-blue-500 transition duration-300 active"><i class="fa-solid fa-globe mr-1"></i>综合</a></li>
+        <li><a href="#announcement" data-target="announcement" class="text-gray-700 px-2 py-1 border-b-2 border-transparent hover:border-blue-500 transition duration-300"><i class="fa-solid fa-bullhorn mr-1"></i>公告</a></li>
+        <li><a href="#event" data-target="event" class="text-gray-700 px-2 py-1 border-b-2 border-transparent hover:border-blue-500 transition duration-300"><i class="fa-solid fa-trophy mr-1"></i>赛事</a></li>
+        <li><a href="#strategy" data-target="strategy" class="text-gray-700 px-2 py-1 border-b-2 border-transparent hover:border-blue-500 transition duration-300"><i class="fa-solid fa-gamepad mr-1"></i>攻略</a></li>
+        <li><a href="#community" data-target="community" class="text-gray-700 px-2 py-1 border-b-2 border-transparent hover:border-blue-500 transition duration-300"><i class="fa-solid fa-users mr-1"></i>社区</a></li>
+    </ul>
+</nav>
+<main class="p-5">
+    <section id="comprehensive" class="active">
+        <h2 class="text-blue-500 text-2xl mb-3"><i class="fa-solid fa-globe mr-1"></i>综合</h2>
+        <article class="bg-white shadow-md p-4">
+            <h3 class="text-blue-500 text-xl mb-3">【云顶之弈】棋盘展示 拉克丝的德玛西亚白日梦</h3>
+            <ul class="list-none">
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span>【英雄联盟】2025灵魂莲华皮肤&泳池派对图奇pbe预... <span class="text-gray-500 float-right">04 - 17</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span>【英雄联盟】皮肤上线宣传片：萨恩•乌祖尔 莫德凯撒 <span class="text-gray-500 float-right">04 - 17</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span>【云顶之弈】至臻 黎明使者 小小永恩展示视频 <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> 织命与逆命(2025)皮肤即将上线 <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> “云顶之弈：赛博之城”系列道具II 限时销售及相关活... <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> 15.8版本公告-诺克萨斯终章 安妮小型调整 圣堂级萨... <span class="text-gray-500 float-right">04 - 16</span></li>
+            </ul>
+            <a href="#" class="block text-center text-gray-500 mt-3 hover:text-blue-500 transition duration-300">阅读更多最新资讯 →</a>
+        </article>
+    </section>
+    <section id="announcement">
+        <h2 class="text-blue-500 text-2xl mb-3"><i class="fa-solid fa-bullhorn mr-1"></i>公告</h2>
+        <article class="bg-white shadow-md p-4">
+            <h3 class="text-blue-500 text-xl mb-3">2025年4月18日 不停机更新</h3>
+            <ul class="list-none">
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> 4月18日周免英雄更新公告 <span class="text-gray-500 float-right">04 - 18</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> 织命与逆命(2025)皮肤即将上线 <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> “云顶之弈：赛博之城”系列道具II 限时销售及相关活... <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> 15.8版本公告-诺克萨斯终章 安妮小型调整 圣堂级萨... <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> 14.2云顶之弈版本更新公告 <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-bullhorn mr-1"></i>公告</span> 女帝和公主的优雅刻印活动上线 <span class="text-gray-500 float-right">04 - 11</span></li>
+            </ul>
+            <a href="#" class="block text-center text-gray-500 mt-3 hover:text-blue-500 transition duration-300">阅读更多最新资讯 →</a>
+        </article>
+    </section>
+    <section id="event">
+        <h2 class="text-blue-500 text-2xl mb-3"><i class="fa-solid fa-trophy mr-1"></i>赛事</h2>
+        <article class="bg-white shadow-md p-4">
+            <h3 class="text-blue-500 text-xl mb-3">2025LPL第二赛段常规赛组内赛4月22日首发...</h3>
+            <ul class="list-none">
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-trophy mr-1"></i>赛事</span> 2025LPL第二赛段周最佳阵容—组内赛阶段Week3 <span class="text-gray-500 float-right">04 - 21</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-trophy mr-1"></i>赛事</span> 2025LPL第二赛段常规赛组内赛W3D5 对阵预告 <span class="text-gray-500 float-right">04 - 18</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-trophy mr-1"></i>赛事</span> 2025LPL第二赛段常规赛组内赛W3D4 对阵预告 <span class="text-gray-500 float-right">04 - 17</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-newspaper mr-1"></i>新闻</span> 云顶之弈TOC11 赛博联赛赛程赛制 <span class="text-gray-500 float-right">04 - 15</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-trophy mr-1"></i>赛事</span> 2025LPL第二赛段周最佳阵容—组内赛阶段Week 1&2 <span class="text-gray-500 float-right">04 - 14</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-newspaper mr-1"></i>新闻</span> 4月10日18点，云弈杯选人大会开启! <span class="text-gray-500 float-right">04 - 10</span></li>
+            </ul>
+            <a href="#" class="block text-center text-gray-500 mt-3 hover:text-blue-500 transition duration-300">阅读更多最新资讯 →</a>
+        </article>
+    </section>
+    <section id="strategy">
+        <h2 class="text-blue-500 text-2xl mb-3"><i class="fa-solid fa-gamepad mr-1"></i>攻略</h2>
+        <article class="bg-white shadow-md p-4">
+            <h3 class="text-blue-500 text-xl mb-3">【电竞心理学】血港鬼影 派克 玩家心理特征...</h3>
+            <ul class="list-none">
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-newspaper mr-1"></i>新闻</span> 14.2更新前瞻，源计划装备调整，魔装机神大砍 <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span> 版本研究所15.8：诺克萨斯终章！安妮中型调整，鳄... <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-newspaper mr-1"></i>新闻</span> 物理版魔神九五，思路略有不同 <span class="text-gray-500 float-right">04 - 14</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-newspaper mr-1"></i>新闻</span> 超高上限魔神九五，偏吃理解，大成咱们就是神 <span class="text-gray-500 float-right">04 - 11</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span> 电竞心理学 风暴之怒 迦娜 玩家心理特征分析 善良纯... <span class="text-gray-500 float-right">04 - 11</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-newspaper mr-1"></i>新闻</span> 别让"他"3星，真的乱杀，裁决狮子狗，砍出一片天 <span class="text-gray-500 float-right">04 - 10</span></li>
+            </ul>
+            <a href="#" class="block text-center text-gray-500 mt-3 hover:text-blue-500 transition duration-300">阅读更多最新资讯 →</a>
+        </article>
+    </section>
+    <section id="community">
+        <h2 class="text-blue-500 text-2xl mb-3"><i class="fa-solid fa-users mr-1"></i>社区</h2>
+        <article class="bg-white shadow-md p-4">
+            <h3 class="text-blue-500 text-xl mb-3">云顶之弈S14优质创作者名单</h3>
+            <ul class="list-none">
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span>【英雄联盟】彼岸•花开花动画逐帧技术解析 <span class="text-gray-500 float-right">04 - 16</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-newspaper mr-1"></i>新闻</span> 灵魂莲华新歌《明日共此时》，赵信返乡寻亲！ <span class="text-gray-500 float-right">04 - 15</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span> 背叛旧主，易容改面！联盟第一点子王闪亮登场！ <span class="text-gray-500 float-right">04 - 14</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span> 背刺挚友企图飞升？泽拉斯的野心葬送了恕瑞玛！ <span class="text-gray-500 float-right">04 - 14</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span> 被剑魔嘲讽为“闪电松鼠”！凯南是如何成为均衡教派首... <span class="text-gray-500 float-right">04 - 14</span></li>
+                <li class="border-l-4 border-transparent pl-3 mb-2 hover:border-blue-500 transition duration-300"><span class="bg-gray-200 px-2 py-1 rounded mr-2"><i class="fa-solid fa-video mr-1"></i>视频</span> 暗裔最强战力！亚托克斯为何要毁灭符文之地？ <span class="text-gray-500 float-right">04 - 14</span></li>
+            </ul>
+            <a href="#" class="block text-center text-gray-500 mt-3 hover:text-blue-500 transition duration-300">阅读更多最新资讯 →</a>
+        </article>
+    </section>
+</main>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav ul');
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('show');
+    });
+
+    const navLinks = document.querySelectorAll('.nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.dataset.target;
+            const allSections = document.querySelectorAll('section');
+            allSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            const targetSection = document.getElementById(targetId);
+            targetSection.classList.add('active');
+
+            // 移除所有链接的 active 类
+            navLinks.forEach(navLink => {
+                navLink.classList.remove('active');
+            });
+            // 给当前点击的链接添加 active 类
+            link.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    	
+		#fengmian {/*背景的处理*/
+            width: 100%;
+            position: fixed;/*固定位置*/
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            filter: brightness(1);/*亮度变为一开始的0.5*/
+            z-index: -1;/*图片显示排序，数字越大 图片就越在上边*/
+            object-fit: cover;/*防止没有占全屏*/
+        }
+    
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none; /* 初始隐藏所有页面 */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .page.active {
+            display: block; /* 显示当前活动页面 */
+        }
+        .nav-dots {
+            position: fixed;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: burlywood;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: red; /* 激活状态的圆点颜色 */
+           expand-border {
+        position: relative;
+        padding: 20px;
+                         }
+                      }
+
+      .body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            min-height: 100vh; /* 确保页面高度占满视口 */
+            display: flex;
+            /*justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+
+        .container {
+            width: 60%; /* 容器宽度占屏幕40% */
+            text-align: center; /* 内部内容居中 */
+             margin: 0 auto;
+             margin-top: 160px;
+        }
+
+        .image-container {
+            width: 100%; /* 图片容器占满父容器宽度 */
+            max-height: 60vh; /* 限制图片最大高度，防止超出屏幕 */
+            overflow: hidden; /* 超出部分隐藏 */
+        }
+
+        .image-container img {
+            width: 100%; /* 图片宽度占满容器 */
+            height: auto; /* 保持图片宽高比 */
+            display: block; /* 去除图片底部空白 */
+        }
+
+        .text-container {
+            margin-top: 0px; /* 文字与图片的间距 */
+            
+            
+        }
+        .text-container2 {
+            margin-bottom: 10px; /* 文字与图片的间距 */
+            
+            
+        }
+           .text2{
+           	color: lightcoral;
+           }
+            .text {
+         
+          font-size: 2em; /* 文字大小 */
+            color: black; /* 文字颜色 */
+            font-family:"宋体";
+          text-decoration: none;
+          transition: all 0.3s ease;
+      /* 添加过渡效果，让变化更平滑 */
+    }
+          .text:hover {
+          font-size: 2.5em;
+        /* 字体变大 */
+         color:gray;
+        /* 文字颜色改变 */
+        text-decoration: underline;
+        /* 出现下划线 */
+        text-underline-offset: 3px;
+        /* 下划线与文字的距离 */
+      }
+        .center {
+        	 width: 40%;
+        	 /*dis：flex 让元素更灵活justi 让图片水平向上居中，align让图片在垂直方面上面*/
+      display: flex;
+     /*justify-content: center;*/
+      align-items: flex-start;
+      min-height: 100vh;
+      margin-left: 50px;
+      margin-top: 50px;
+      /*float: left;*/
+    }
+
+    .shili{
+      width: 50%;
+      max-height: 60%;
+      transform:scaleX(1.1);
+      /*水平方向放大*/
+    }
+  </style>
+    
+</head>
+<body>
+    <!-- 页面内容 -->
+<div class="body">
+	
+    <div class="page active" id="page1">
+    	<div>
+    		<video autoplay="autoplay" muted="muted" id="fengmian" loop="loop">
+        <source src="img/871751460-1-208.mp4" type="video/mp4"></source>
+    	</div>  
+    	
+        <div  class="container">
+        <div class="image-container">
+        	<div  class="text-container2"  style="border: 2px dashed gold ; background: linear-gradient(to right, yellow, red); width: 50%; margin: 0 auto;   margin-bottom: 10px; " >
+              <h1 class="text2">LOL重磅活动来袭！！</h1 >              
+        </div> 
+        
+            <img src="img/cefaac0617377c176fb020280d33653.jpg"   alt="tu1">
+        </div>
+        <div  class="text-container"  style="border: 2px solid black;background-color: white; " >
+              <a href=" " class="text">女帝和公主的优雅刻印</a >              
+        </div>  
+        </div>
+     </div>
+        
+        	<div class="center">
+    <img class="shili"  src="img/t017d83920f7bb7bc97.jpg" alt="示例图片" >
+  </div>
+    
+    <div class="page" id="page2">
+        <div>
+    		<video autoplay="autoplay" muted="muted" id="fengmian" loop="loop">
+        <source src="img/718799100-1-208.mp4"  type="video/mp4"></source>
+    	</div>  
+    	
+        <div  class="container">
+        <div class="image-container">
+        	<div  class="text-container2"  style="border: 2px dashed gold ; background: linear-gradient(to right, yellow, red);; width: 50%; margin: 0 auto;   margin-bottom: 10px; " >
+              <h1 class="text2">LOL重磅活动来袭！！</h1 >              
+        </div>   
+            <img src="img/微信图片_20250423211622.jpg"    alt="tu1">
+        </div>
+        <div  class="text-container"  style="border: 2px solid black;background-color: white; " >
+              <a href=" " class="text">天命秘宝</a >              
+        </div>  
+        </div>
+    </div>
+    <div class="page" id="page4">
+        <div>
+    		<video autoplay="autoplay" muted="muted" id="fengmian" loop="loop">
+        <source src="img/无标题视频——使用Clipchamp制作.mp4"  type="video/mp4"></source>
+    	</div>  
+    	
+        <div  class="container">
+        <div class="image-container">
+        	<div  class="text-container2"  style="border: 2px dashed gold ; background: linear-gradient(to right, yellow, red);; width: 50%; margin: 0 auto;   margin-bottom: 10px; " >
+              <h1 class="text2">LOL重磅活动来袭！！</h1 >              
+        </div>  
+            <img src="img/微信图片_20250423211617.jpg"   alt="tu1">
+        </div>
+        <div  class="text-container"  style="border: 2px solid black;background-color: white; " >
+              <a href=" " class="text">愚乐派对满额礼物赠</a >              
+        </div>  
+        </div>
+    </div>
+    <div class="page" id="page3">
+        <div>
+    		<video autoplay="autoplay" muted="muted" id="fengmian" loop="loop">
+        <source src="img/无标题视频——使用Clipchamp制作2.mp4" type="video/mp4"></source>
+    	</div>  
+    	
+        <div  class="container">
+        <div class="image-container">
+        	<div  class="text-container2"  style="border: 2px dashed gold ; background: linear-gradient(to right, yellow, red);; width: 50%; margin: 0 auto;   margin-bottom: 10px; " >
+              <h1 class="text2">LOL重磅活动来袭！！</h1 >              
+        </div>  
+            <img src="img/微信图片_20250423211652.jpg"    alt="tu1">
+        </div>
+        <div  class="text-container"  style="border: 2px solid black;background-color: white; " >
+              <a href=" " class="text">暗潮退散，吾名黎明</a >              
+        </div>  
+        </div>
+    </div>
+    <div class="page" id="page5">
+        <div>
+    		<video autoplay="autoplay" muted="muted" id="fengmian" loop="loop">
+        <source src="img/无标题视频——使用Clipchamp制作3.mp4"  type="video/mp4"></source>
+    	</div>  
+    	
+        <div  class="container">
+        <div class="image-container">
+        	<div  class="text-container2"  style="border: 2px dashed gold ; background: linear-gradient(to right, yellow, red);; width: 50%; margin: 0 auto;   margin-bottom: 10px; " >
+              <h1 class="text2">LOL重磅活动来袭！！</h1 >              
+        </div>  
+            <img src="img/微信图片_20250423211603.jpg"  alt="tu1">
+        </div>
+        <div  class="text-container"  style="border: 2px solid black;background-color: white; " >
+              <a href=" " class="text">精选皮肤限时五折</a >              
+        </div>  
+        </div>
+    </div>
+    
+
+    <!-- 圆点导航 -->
+    <div class="nav-dots">
+        <span class="dot active" data-page="page1"></span>
+        <span class="dot" data-page="page2"></span>
+        <span class="dot" data-page="page3"></span>
+        <span class="dot" data-page="page4"></span>
+        <span class="dot" data-page="page5"></span>
+    </div>
+
+    <script>
+        const dots = document.querySelectorAll('.dot');
+        const pages = document.querySelectorAll('.page');
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                // 移除所有圆点的激活状态
+                dots.forEach(d => d.classList.remove('active'));
+                dot.classList.add('active');
+
+                // 隐藏所有页面
+                pages.forEach(p => p.classList.remove('active'));
+                const pageId = dot.dataset.page;
+                document.getElementById(pageId).classList.add('active');
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
